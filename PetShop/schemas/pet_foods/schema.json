@@ -1,0 +1,290 @@
+{
+  "settings": [],
+  "name": "pet_foods",
+  "groups": [
+    "/schemas/schemas/products"
+  ],
+  "id": "${schemaId-pet_foods}",
+  "fields": [
+    {
+      "settings": [
+        {
+          "key": "internal",
+          "value": "false"
+        },
+        {
+          "key": "type",
+          "value": "TEXT"
+        },
+        {
+          "key": "maxoccurs",
+          "value": "1"
+        },
+        {
+          "value": "true",
+          "key": "displayinlist"
+        },
+        {
+          "key": "captions/default",
+          "value": "ID"
+        }
+      ],
+      "name": "identifier"
+    },
+    {
+      "settings": [
+        {
+          "key": "internal",
+          "value": "false"
+        },
+        {
+          "key": "type",
+          "value": "TEXT"
+        },
+        {
+          "key": "maxoccurs",
+          "value": "1"
+        },
+        {
+          "value": "true",
+          "key": "displayinlist"
+        },
+        {
+          "key": "captions/default",
+          "value": "Name"
+        }
+      ],
+      "name": "name"
+    },
+    {
+      "settings": [
+        {
+          "key": "internal",
+          "value": "false"
+        },
+        {
+          "key": "type",
+          "value": "LIST"
+        },
+        {
+          "key": "maxoccurs",
+          "value": "1"
+        },
+        {
+          "value": "true",
+          "key": "displayinlist"
+        },
+        {
+          "key": "possiblevalues",
+          "values": [
+            {
+              "settings": [
+                {
+                  "key": "value",
+                  "value": "dog"
+                },
+                {
+                  "key": "captions/default",
+                  "value": "Dog"
+                }
+              ],
+              "name": "dog"
+            },
+            {
+              "settings": [
+                {
+                  "key": "value",
+                  "value": "cat"
+                },
+                {
+                  "key": "captions/default",
+                  "value": "Cat"
+                }
+              ],
+              "name": "cat"
+            },
+            {
+              "settings": [
+                {
+                  "key": "value",
+                  "value": "mouse"
+                },
+                {
+                  "key": "captions/default",
+                  "value": "Mouse"
+                }
+              ],
+              "name": "mouse"
+            }
+          ]
+        },
+        {
+          "key": "captions/default",
+          "value": "Pettype"
+        }
+      ],
+      "name": "type"
+    },
+    {
+      "settings": [
+        {
+          "key": "placeholder",
+          "value": "Expiration Date."
+        },
+        {
+          "key": "format",
+          "value": "DD.MM.YYYY"
+        },
+        {
+          "key": "type",
+          "value": "DATE"
+        },
+        {
+          "key": "captions/default",
+          "value": "Expiration Date :"
+        }
+      ],
+      "name": "expiration"
+    },
+    {
+      "settings": [
+        {
+          "key": "placeholder",
+          "value": "Price in Euro."
+        },
+        {
+          "key": "unit",
+          "value": "€"
+        },
+        {
+          "key": "type",
+          "value": "NUMBER"
+        },
+        {
+          "key": "captions/default",
+          "value": "Price in Euro:"
+        }
+      ],
+      "name": "price"
+    },
+    {
+      "settings": [
+        {
+          "key": "placeholder",
+          "value": "In stock?"
+        },
+        {
+          "key": "type",
+          "value": "CHECKBOX"
+        },
+        {
+          "key": "captions/default",
+          "value": "Stock:"
+        }
+      ],
+      "name": "stock"
+    },
+    {
+      "settings": [
+        {
+          "key": "placeholder",
+          "value": "Deliverer"
+        },
+        {
+          "key": "type",
+          "value": "SCHEMA"
+        },
+        {
+          "key": "schema",
+          "value": "${schemaId-contacts}"
+        },
+        {
+          "key": "captions/default",
+          "value": "Deliverer"
+        }
+      ],
+      "name": "deliverer"
+    },
+    {
+      "settings": [
+        {
+          "value": "false",
+          "key": "internal"
+        },
+        {
+          "value": "MEDIA",
+          "key": "type"
+        },
+        {
+          "value": "IMAGE",
+          "key": "mediatype"
+        },
+        {
+          "value": "1",
+          "key": "maxoccurs"
+        },
+        {
+          "value": "true",
+          "key": "online"
+        },
+        {
+          "value": "Picture",
+          "key": "captions/default"
+        }
+      ],
+      "name": "picture"
+    },
+    {
+      "settings": [
+        {
+          "value": "MEDIA",
+          "key": "type"
+        },
+        {
+          "value": "LINK",
+          "key": "mediatype"
+        },
+        {
+          "value": "1",
+          "key": "maxoccurs"
+        },
+        {
+          "value": "true",
+          "key": "online"
+        },
+        {
+          "value": "Purchase-Link",
+          "key": "captions/default"
+        }
+      ],
+      "name": "pclink"
+    },
+    {
+      "settings": [
+        {
+          "value": "false",
+          "key": "internal"
+        },
+        {
+          "value": "TEXTAREA",
+          "key": "type"
+        },
+        {
+          "value": "1",
+          "key": "maxoccurs"
+        },
+        {
+          "value": "Description",
+          "key": "captions/default"
+        }
+      ],
+      "name": "description"
+    }
+  ],
+  "captions": [
+    {
+      "value": "PetFood",
+      "key": "default"
+    }
+  ]
+}

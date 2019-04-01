@@ -1,0 +1,18 @@
+{
+  "componentId": null,
+  "schemaId": "${schemaId-pets}",
+  "id": "${viewId-pets2}",
+  "name": "list",
+  "categories": [
+    {
+      "name": "details",
+      "fields": [
+        "identifier",
+        "name",
+        "age",
+        "size",
+        "sold"
+        ]
+    }
+  ]
+}

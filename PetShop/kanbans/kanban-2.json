@@ -1,0 +1,30 @@
+{
+  "captions": {
+    "default": "Caretaking"
+  },
+  "children": [
+    {
+      "captions": {
+        "default": "Check Stock"
+      },
+      "name": "check",
+      "schemaId": "pet_foods"
+    },
+    {
+      "captions": {
+        "default": "Order Food"
+      },
+      "name": "order",
+      "schemaId": "pet_foods"
+    },
+    {
+      "captions": {
+        "default": "Determine Pricing"
+      },
+      "name": "price",
+      "schemaId": "pet_foods"
+    }
+  ],
+  "name": "caretaking",
+  "schemaId": "pet_foods"
+}

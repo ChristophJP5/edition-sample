@@ -1,0 +1,26 @@
+{
+  "componentId": null,
+  "schemaId": "${schemaId-pets}",
+  "id": "${viewId-pets0}",
+  "name": "pets",
+  "categories": [
+    {
+      "name": "informations",
+      "fields": [
+        "identifier",
+        "name",
+        "type",
+        "age",
+        "birthdate",
+        "size",
+        "healthcheck",
+        "newowner",
+        "sold",
+        "picture",
+        "ytlink",
+        "documents",
+        "description"
+      ]
+    }
+  ]
+}

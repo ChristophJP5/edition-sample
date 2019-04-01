@@ -1,0 +1,18 @@
+{
+  "componentId": null,
+  "schemaId": "${schemaId-pet_foods}",
+  "id": "${viewId-pet_foods1}",
+  "name": "EntityRelationView",
+  "categories": [
+    {
+      "name": "details",
+      "fields": [
+		"identifier",
+        "name",
+        "age",
+        "size",
+        "sold"
+      ]
+    }
+  ]
+}

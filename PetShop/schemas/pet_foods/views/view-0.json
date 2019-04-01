@@ -1,0 +1,23 @@
+{
+  "componentId": null,
+  "schemaId": "${schemaId-pet_foods}",
+  "id": "${viewId-pet_foods0}",
+  "name": "pet_foods",
+  "categories": [
+    {
+      "name": "informations",
+      "fields": [
+        "identifier",
+        "name",
+        "type",
+        "expiration",
+        "price",
+        "stock",
+        "deliverer",
+        "picture",
+        "pclink",
+        "description"
+      ]
+    }
+  ]
+}

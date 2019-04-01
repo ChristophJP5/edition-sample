@@ -1,0 +1,30 @@
+{
+  "captions": {
+    "default": "Selling"
+  },
+  "children": [
+    {
+      "captions": {
+        "default": "Create advertising"
+      },
+      "name": "createadvertising",
+      "schemaId": "pets"
+    },
+    {
+      "captions": {
+        "default": "Inspection with potential Buyer"
+      },
+      "name": "Inspection with potential Buyer",
+      "schemaId": "pets"
+    },
+    {
+      "captions": {
+        "default": "Create Contract"
+      },
+      "name": "createcontract",
+      "schemaId": "pets"
+    }
+  ],
+  "name": "selling",
+  "schemaId": "pets"
+}
