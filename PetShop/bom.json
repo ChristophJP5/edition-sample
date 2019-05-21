@@ -1,5 +1,5 @@
 {
-  "selectableByCustomer": true,
+  "selectableByCustomer": false,
   "requires": [
     {
       "bundle": "CRM",
