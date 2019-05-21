@@ -3,6 +3,7 @@
   "schemaId": "${schemaId-pets}",
   "id": "${viewId-pets0}",
   "name": "pets",
+  "type": "DEFAULT",
   "categories": [
     {
       "name": "informations",

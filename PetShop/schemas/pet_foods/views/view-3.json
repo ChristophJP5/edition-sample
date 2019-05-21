@@ -3,6 +3,7 @@
   "schemaId": "${schemaId-pet_foods}",
   "id": "${viewId-pet_foods3}",
   "name": "card",
+  "type": "CARD",
   "categories": [
     {
       "name": "image",

@@ -3,6 +3,7 @@
   "schemaId": "${schemaId-pet_foods}",
   "id": "${viewId-pet_foods2}",
   "name": "list",
+  "type": "LIST",
   "categories": [
     {
       "name": "details",

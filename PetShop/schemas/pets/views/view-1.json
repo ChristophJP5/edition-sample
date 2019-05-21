@@ -3,6 +3,7 @@
   "schemaId": "${schemaId-pets}",
   "id": "${viewId-pets1}",
   "name": "EntityRelationView",
+  "type": "ENTITY_RELATION",
   "categories": [
     {
       "name": "details",
