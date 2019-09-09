@@ -19,10 +19,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://api.production.cloudios.flowfact-prod.cloud/view-definition-service/stable/views?schemaId={schemaId}",
 							"protocol": "https",
@@ -59,10 +55,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://api.production.cloudios.flowfact-prod.cloud/view-definition-service/stable/views/{viewId}",
 							"protocol": "https",
@@ -179,10 +171,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://api.production.cloudios.flowfact-prod.cloud/sampledata-service/stable/import?bundleName={bundleName}",
 							"protocol": "https",
@@ -224,10 +212,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://api.production.cloudios.flowfact-prod.cloud/schema-service/stable/schemas/groups",
 							"protocol": "https",
@@ -259,10 +243,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://api.production.cloudios.flowfact-prod.cloud/schema-service/stable/schemas",
 							"protocol": "https",
@@ -293,10 +273,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://api.production.cloudios.flowfact-prod.cloud/schema-service/stable/schemas/{schemaId}",
 							"protocol": "https",
@@ -373,10 +349,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://api.production.cloudios.flowfact-prod.cloud/contact-service/stable/contact?email={email}",
 							"protocol": "https",
@@ -415,13 +387,13 @@
 							},
 							{
 								"key": "cognitoToken",
-								"value": "{cognitoToken}",
+								"value": "eyJraWQiOiIrSjVYZHE3ejRTbkV6ZytFUitrdFFZdVZcL00xZVlVYkd0YmxPenBtdFY4QT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI0N2U2YmY2MC0wMzA4LTRiYjktYjlkZS1jNTc1ZjQ0Y2FhNTEiLCJhdWQiOiI1N2Jybjhjc2ZmNjc4bzZhZWUzazFpYTAwbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6IjBmZWJiNmM5LWRjNjEtNDZlMy04MDMwLWIzNWY5NGYzNzJhMSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTYyMTM4NjEzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtY2VudHJhbC0xLmFtYXpvbmF3cy5jb21cL2V1LWNlbnRyYWwtMV9SZEh6bFNLUzAiLCJjb2duaXRvOnVzZXJuYW1lIjoiYmVzbmlrLmNlbGFqQGdteC5kZSIsImV4cCI6MTU2MjE0MjIxMywiaWF0IjoxNTYyMTM4NjEzLCJlbWFpbCI6ImJlc25pay5jZWxhakBnbXguZGUifQ.FJ1jPyti-5B8hTInYhFGjDKImlt0eS9o8e28WcnOEOyyYqiOFrCYGWx_RIhWuFGs58nDF7K0smaj0IdStny9pu7_K3MwQKrlogiTbTcnnmPxV64LmVpoGqjsh86LK8OxPs10gKo_2SSv4dBlsZdvffejqJ5OCoHEYgbwjEcSxffJWysIqBzJOT35MUK8bGtqF_rPwn6HKWJU-wTYMflosKqR8uir-Dl2n0aei2oo59l4-t7ZYADxOOmblIb7DvMQsAE1sy9GcOdsBXLhTiDrCEYqZP-LHXzPaNec9jPS2AM2_MmFsi4tqSdBxDABRMd7_NHM2mZmfApxmY3tJDVxIQ",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "\n{\n    \"firstName\": \"Colin\",\n    \"lastName\": \"Groebel\",\n    \"salutationletter\": \"Sehr geehrter Herr Groebel,\",\n    \"salutation\": \"Herr\",\n    \"emails\": [\n        \"colin.groebel@flowfact.de\"\n    ],\n    \"tags\": [\n        \"employee\"\n    ],\n    \"status\": \"active\",\n    \"identifier\": \"8\",\n    \"company\": \"Flowfact\",\n    \"note\": \"Nächste Woche in Urlaub\",\n    \"keywords\": [],\n    \"phones\": [\n        {\n            \"type\": \"office\",\n            \"number\": \"022199590149\",\n            \"note\": \"Nur Morgens erreichbar.\"\n        }\n    ],\n    \"addresses\": [\n        {\n            \"city\": \"Köln\",\n            \"street\": \"Holweiderstraße 2a\",\n            \"type\": \"office\",\n            \"country\": \"Deutschland\",\n            \"zipcode\": \"51065\",\n            \"internationalregion\": \"\"\n        }\n    ],\n    \"contacttypes_allowed\": [],\n    \"homepage\": [\n        \"https://www.flowfact.de\"\n    ],\n    \"latitude\": {\n        \"values\": [\n            50.96354235\n        ]\n    },\n    \"isBlocked\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"longitude\": {\n        \"values\": [\n            7.00825927918016\n        ]\n    },\n    \"profession\": {\n        \"values\": [\n            \"Produktmanager\"\n        ]\n    }\n}\n"
+							"raw": "{\n    \"firstName\": \"Colin\",\n    \"lastName\": \"Groebel\",\n    \"salutationletter\": \"Sehr geehrter Herr Groebel,\",\n    \"salutation\": \"Herr\",\n    \"emails\": [\n        \"colin.groebel@flowfact.de\"\n    ],\n    \"tags\": [\n        \"employee\"\n    ],\n    \"status\": \"active\",\n    \"company\": \"Flowfact\",\n    \"note\": \"Nächste Woche in Urlaub\",\n    \"keywords\": [],\n    \"phones\": [\n        {\n            \"type\": \"office\",\n            \"number\": \"022199590149\",\n            \"note\": \"Nur Morgens erreichbar.\"\n        }\n    ],\n    \"addresses\": [\n        {\n            \"city\": \"Köln\",\n            \"street\": \"Holweiderstraße 2a\",\n            \"type\": \"office\",\n            \"country\": \"Deutschland\",\n            \"zipcode\": \"51065\",\n            \"internationalregion\": \"\"\n        }\n    ],\n    \"contacttypes_allowed\": [],\n    \"homepage\": [\n        \"https://www.flowfact.de\"\n    ],\n    \"latitude\": {\n        \"values\": [\n            50.96354235\n        ]\n    },\n    \"isBlocked\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"longitude\": {\n        \"values\": [\n            7.00825927918016\n        ]\n    },\n    \"profession\": {\n        \"values\": [\n            \"Produktmanager\"\n        ]\n    },\n    \"hatHaustiere\": {\n    \t\"values\": [\n    \t\ttrue\n    \t\t]\n    }\n}\n"
 						},
 						"url": {
 							"raw": "https://api.production.cloudios.flowfact-prod.cloud/contact-service/stable/contact",
@@ -530,6 +502,154 @@
 			]
 		},
 		{
+			"name": "IEX",
+			"item": [
+				{
+					"name": "Template Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "isPublic",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "templateName",
+									"value": "lennartest5",
+									"type": "text"
+								},
+								{
+									"key": "templateNiceName",
+									"value": "lennartest5",
+									"type": "text"
+								},
+								{
+									"key": "templateFiles",
+									"type": "file"
+								},
+								{
+									"key": "templateFiles",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlPrefix}}interactive-expose-service{{urlVersion}}interactiveExposes/templates/lennartest5",
+							"host": [
+								"{{urlPrefix}}interactive-expose-service{{urlVersion}}interactiveExposes"
+							],
+							"path": [
+								"templates",
+								"lennartest5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Template Get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlPrefix}}interactive-expose-service{{urlVersion}}interactiveExposes/templates/lennartest5",
+							"host": [
+								"{{urlPrefix}}interactive-expose-service{{urlVersion}}interactiveExposes"
+							],
+							"path": [
+								"templates",
+								"lennartest5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Template Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlPrefix}}interactive-expose-service/{{urlVersion}}/interactiveExposes/templates/lennartest",
+							"host": [
+								"{{urlPrefix}}interactive-expose-service"
+							],
+							"path": [
+								"{{urlVersion}}",
+								"interactiveExposes",
+								"templates",
+								"lennartest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Template Assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n\t\t\"companyId\":\"{{companyId}}\",\n\t\t\"isDefault\":\"false\",\n\t\t\"templateName\":\"lennartest\"\n\t}\n]"
+						},
+						"url": {
+							"raw": "{{urlPrefix}}interactive-expose-service/{{urlVersion}}/interactiveExposes/templates/assignments",
+							"host": [
+								"{{urlPrefix}}interactive-expose-service"
+							],
+							"path": [
+								"{{urlVersion}}",
+								"interactiveExposes",
+								"templates",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Entity-Api",
 			"item": [
 				{
@@ -543,10 +663,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://api.production.cloudios.flowfact-prod.cloud/entity-service/stable/schemas/{SchemaId}/entities/{EntityId}",
 							"protocol": "https",
@@ -613,6 +729,40 @@
 			]
 		},
 		{
+			"name": "User-Api",
+			"item": [
+				{
+					"name": "Alle User des Unternehmens Anzeigen",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{cognitoToken}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/user-service/users",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"user-service",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "CognitoToken generieren",
 			"request": {
 				"method": "GET",
@@ -623,10 +773,6 @@
 						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
 					"raw": "https://api.production.cloudios.flowfact-prod.cloud/admin-token-service/stable/public/adminUser/authenticate",
 					"protocol": "https",
@@ -643,6 +789,45 @@
 						"public",
 						"adminUser",
 						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Install Bundle to Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cognitoToken",
+						"value": "{{cognitoToken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bundles\":[\n\t\t{\n\t\t\t\"bundleName\":\"Commercial\",\n\t\t\t\"scope\":\"FLOWFACT\",\n\t\t\t\"withEntities\":false\n\t\t\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "https://api.production.cloudios.flowfact-prod.cloud/sampledata-service/stable/batchimport",
+					"protocol": "https",
+					"host": [
+						"api",
+						"production",
+						"cloudios",
+						"flowfact-prod",
+						"cloud"
+					],
+					"path": [
+						"sampledata-service",
+						"stable",
+						"batchimport"
 					]
 				}
 			},
