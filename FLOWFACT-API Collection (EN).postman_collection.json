@@ -1,0 +1,984 @@
+{
+	"info": {
+		"_postman_id": "046a355e-d1ef-4131-a8b4-30eef7541bf5",
+		"name": "FLOWFACT-API Collection (EN)",
+		"description": "This Collection contains a selection of the most used API-Calls that are used for Customizing FLOWFACT or building Applications that are using the FLOWFACT-API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Create CognitoToken",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/admin-token-service/stable/public/adminUser/authenticate",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"admin-token-service",
+								"stable",
+								"public",
+								"adminUser",
+								"authenticate"
+							]
+						},
+						"description": "This Call creates a CognitoToken, that is used to authenticate against the FLOWFACT-API. Each Token that is returned from this Request is valid for about 15-30 Minutes. \nThe API-Token that is used as a parameter for this call can be obtained inside the FLOWFACT-Software from the Wordpress-Connector inside the Settings."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Edition-API",
+			"item": [
+				{
+					"name": "Upload an Edition",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/sampledata-service/stable/upload",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"sampledata-service",
+								"stable",
+								"upload"
+							]
+						},
+						"description": "The Upload an Edition Call needs a ZIP-File as Binary, which contains the Edition Folder"
+					},
+					"response": []
+				},
+				{
+					"name": "Install an Edition",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/sampledata-service/stable/import?bundleName={{bundleName}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"sampledata-service",
+								"stable",
+								"import"
+							],
+							"query": [
+								{
+									"key": "bundleName",
+									"value": "{{bundleName}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User-API",
+			"item": [
+				{
+					"name": "Show all users of the company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"type": "text",
+								"value": "{{cognitoToken}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/user-service/users",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"user-service",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Schema-API",
+			"item": [
+				{
+					"name": "Show all Schema-Groups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"type": "text",
+								"value": "{{cognitoToken}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/schema-service/stable/schemas/groups?x-ff-version=2",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"schema-service",
+								"stable",
+								"schemas",
+								"groups"
+							],
+							"query": [
+								{
+									"key": "x-ff-version",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show all Schemas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/schema-service/stable/v2/schemas/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"schema-service",
+								"stable",
+								"v2",
+								"schemas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show a specific Schema",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/schema-service/stable/v2/schemas/{{schemaId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"schema-service",
+								"stable",
+								"v2",
+								"schemas",
+								"{{schemaId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"FacilityManagementServiceRequest\",\n    \"groups\": [],\n    \"captions\": {\n        \"de\": \"FacilityManagementServiceRequest\"\n    },\n    \"properties\": {\n        \"Description\": {\n            \"type\": \"TEXT\",\n            \"captions\": {\n                \"de\": \"Description\"\n            },\n            \"displayinlist\": true,\n            \"maxoccurs\": \"1\"\n        },\n        \"Building\": {\n            \"type\": \"SCHEMA\",\n            \"captions\": {\n                \"de\": \"Building\"\n            },\n            \"lnk_schema\": \"office_surgery_purchase\",\n            \"maxoccurs\": \"1\"\n        },\n        \"Problemtype\": {\n            \"type\": \"LIST\",\n            \"captions\": {\n                \"de\": \"Problemtype\"\n            },\n            \"fields\": {\n                \"1\": {\n                    \"value\": \"1\",\n                    \"captions\": {\n                        \"de\": \"1\"\n                    }\n                },\n                \"2\": {\n                    \"value\": \"2\",\n                    \"captions\": {\n                        \"de\": \"2\"\n                    }\n                },\n                \"3\": {\n                    \"value\": \"3\",\n                    \"captions\": {\n                        \"de\": \"3\"\n                    }\n                }\n            },\n            \"displayinlist\": true,\n            \"maxoccurs\": \"1\"\n        }\n    },\n    \"metadata\": {},\n    \"global\": false\n}"
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/schema-service/stable/v2/schemas",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"schema-service",
+								"stable",
+								"v2",
+								"schemas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Schema",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{JsonSchema}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/schema-service/stable/v2/schemas/{{schemaId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"schema-service",
+								"stable",
+								"v2",
+								"schemas",
+								"{{schemaId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "View-API",
+			"item": [
+				{
+					"name": "Show all Views for a Schema",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/view-definition-service/stable/views?schemaId={{schemaId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"view-definition-service",
+								"stable",
+								"views"
+							],
+							"query": [
+								{
+									"key": "schemaId",
+									"value": "{{schemaId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show a specific View",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/view-definition-service/stable/views/{{viewId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"view-definition-service",
+								"stable",
+								"views",
+								"{{viewId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change a View",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{View}"
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/view-definition-service/stable/views/{{viewId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"view-definition-service",
+								"stable",
+								"views",
+								"{{viewId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Entity-API",
+			"item": [
+				{
+					"name": "Show an Entity",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"type": "text",
+								"value": "{{cognitoToken}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/entity-service/stable/schemas/{SchemaId}/entities/{{entityId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"entity-service",
+								"stable",
+								"schemas",
+								"{SchemaId}",
+								"entities",
+								"{{entityId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create an Entity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"let\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"rooms\": {\n        \"values\": [\n            2\n        ]\n    },\n    \"status\": {\n        \"values\": [\n            \"inactive\"\n        ]\n    },\n    \"street\": {\n        \"values\": [\n            \"Margaretenstraße 27\"\n        ]\n    },\n    \"contact\": {\n        \"values\": []\n    },\n    \"created\": {\n        \"values\": [\n            1535958256\n        ]\n    },\n    \"elevator\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"headline\": {\n        \"values\": [\n            \"Musterdaten - Etagenwohung direkt im Herzen von Lichtenberg\"\n        ]\n    },\n    \"landlord\": {\n        \"values\": [\n            \"5a6eb8f1-850d-41b3-b306-96d2b937c90d\"\n        ]\n    },\n    \"latitude\": {\n        \"values\": [\n            52.5079643\n        ]\n    },\n    \"modified\": {\n        \"values\": [\n            1535958770\n        ]\n    },\n    \"priority\": {\n        \"values\": [\n            0\n        ]\n    },\n    \"shutters\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"addresses\": {\n        \"values\": [\n            {\n                \"city\": \"Berlin\",\n                \"type\": \"private\",\n                \"state\": null,\n                \"street\": \"Margaretenstraße 27\",\n                \"country\": \"Deutschland\",\n                \"zipcode\": \"10317\",\n                \"district\": null\n            }\n        ]\n    },\n    \"condition\": {\n        \"values\": [\n            \"01\"\n        ]\n    },\n    \"documents\": {\n        \"values\": []\n    },\n    \"longImage\": {\n        \"values\": [\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/3b/fda50215-6cb1-40d9-a7f5-29f55bf29e3b.jpg\",\n                \"size\": 46667,\n                \"headline\": \"asdf\",\n                \"position\": 0,\n                \"description\": \"asdf\"\n            },\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/6f97f7e5-dd52-4b51-b989-96e5598d2966.jpg\",\n                \"online\": true,\n                \"headline\": \"\",\n                \"position\": 1,\n                \"description\": \"\"\n            },\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/984ae908-1d70-4ad5-9d64-0cfad5b6e002.jpg\",\n                \"online\": true,\n                \"headline\": \"\",\n                \"position\": 2,\n                \"description\": \"\"\n            },\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/7322fad6-f61e-4773-9ca5-375e474521d8.jpg\",\n                \"online\": true,\n                \"headline\": \"\",\n                \"position\": 3,\n                \"description\": \"\"\n            }\n        ]\n    },\n    \"longitude\": {\n        \"values\": [\n            13.4974211\n        ]\n    },\n    \"mainImage\": {\n        \"values\": [\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/6c488d00-b42a-484e-b38e-b98e1a4b5ae2.jpg\",\n                \"online\": true,\n                \"headline\": \"\",\n                \"position\": 0,\n                \"description\": \"\"\n            }\n        ]\n    },\n    \"tradeType\": {\n        \"values\": [\n            \"0\"\n        ]\n    },\n    \"cellararea\": {\n        \"values\": [\n            32\n        ]\n    },\n    \"department\": {\n        \"values\": [\n            \"0\"\n        ]\n    },\n    \"estatetype\": {\n        \"values\": [\n            \"01\"\n        ]\n    },\n    \"identifier\": {\n        \"values\": [\n            \"5029\"\n        ]\n    },\n    \"livingarea\": {\n        \"values\": [\n            165\n        ]\n    },\n    \"numgarages\": {\n        \"values\": [\n            1\n        ]\n    },\n    \"shortImage\": {\n        \"values\": []\n    },\n    \"textEstate\": {\n        \"values\": [\n            \"Wohnen am Ostbahnhof. Leben Sie im Herzen von Berlin. In 10 Minuten mit der S-Bahn erreichen Sie sowohl den Alexanderplatz wie auch das Szeneviertel an der Warschauer Straße. Alle Apartments wurde im Jahr 2018 fertiggestellt und verfügen serienmäßig über eine Hochwertige Einbauküche.\"\n        ]\n    },\n    \"barrierfree\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"internImage\": {\n        \"values\": []\n    },\n    \"onlineImage\": {\n        \"values\": []\n    },\n    \"no_of_floors\": {\n        \"values\": [\n            2\n        ]\n    },\n    \"ceilingheight\": {\n        \"values\": [\n            3\n        ]\n    },\n    \"purchaseprice\": {\n        \"values\": [\n            171000\n        ]\n    },\n    \"typeofheating\": {\n        \"values\": [\n            \"FER\"\n        ]\n    },\n    \"completiondate\": {\n        \"values\": [\n            \"Sofort\"\n        ]\n    },\n    \"numberbedrooms\": {\n        \"values\": [\n            2\n        ]\n    },\n    \"sendToLandlord\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"builtin_kitchen\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"fuelenergy_type\": {\n        \"values\": [\n            \"FER\"\n        ]\n    },\n    \"groundplotImage\": {\n        \"values\": [\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/7381d82a-e3eb-4a70-8ce5-c561c5084d65.jpg\",\n                \"online\": true,\n                \"headline\": \"6\",\n                \"position\": 0,\n                \"description\": \"\"\n            },\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/82d534d4-6796-42b0-84ce-fea344fba5b8.jpg\",\n                \"online\": false,\n                \"headline\": \"\",\n                \"position\": 1,\n                \"description\": \"\"\n            },\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/f58b8e56-35f6-4f54-9624-f99dbe8573cf.jpg\",\n                \"online\": false,\n                \"headline\": \"\",\n                \"position\": 2,\n                \"description\": \"\"\n            }\n        ]\n    },\n    \"pass_valid_till\": {\n        \"values\": [\n            1846015200\n        ]\n    },\n    \"showAsReference\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"textEnvironment\": {\n        \"values\": [\n            \"Hier befindet sich ein Windfang, ein großer Küchen- und Essbereich mit Kaminzimmer. Das große Wohnzimmer mit angrenzender überdachter Sonnenterrasse bildet den Mittelpunkt des Hauses. Die Küche ist mit einer hochwertigen, noch sehr neuen Einbauküche inkl. hochwertigen Einbaugeräten der Marke Miele ausgestattet. Ebenfalls befindet sich im unteren Bereich das Ankleidezimmer mit angrenzendem Schlafzimmer, ein Wannen- und Duschbad sowie ein separates Gäste-WC. \\n\\nDas Dachgeschoss hat eine Nutzfläche von ca. 100 m². Vier weitere Zimmer wurde in Wohnraumqualität ausgebaut und haben, auf Grund der Dachschrägen, einen besonderen Wohlfühlcharme. Ein weiteres Duschbad ist ebenfalls vorhanden.\"\n        ]\n    },\n    \"country_zip_city\": {\n        \"values\": [\n            \"10317 Berlin\"\n        ]\n    },\n    \"elevator_general\": {\n        \"values\": [\n            \"1\"\n        ]\n    },\n    \"energyusagevalue\": {\n        \"values\": [\n            35\n        ]\n    },\n    \"kitchen_existing\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"wheelchairaccess\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"commissionCompany\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"commissionPartner\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"commissioninclvat\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"numlivingbedrooms\": {\n        \"values\": [\n            1\n        ]\n    },\n    \"commissionLandlord\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"commissionProspect\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"commissionTipGiver\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"yearofconstruction\": {\n        \"values\": [\n            2018\n        ]\n    },\n    \"commissionColleague\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"energywithwarmwater\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"internaldescription\": {\n        \"values\": [\n            \"Musterdaten - ETW Margaretenstraße 27\"\n        ]\n    },\n    \"energyefficienceclass\": {\n        \"values\": [\n            \"02\"\n        ]\n    },\n    \"energidentificationdate\": {\n        \"values\": [\n            1530396000\n        ]\n    },\n    \"energyidentificationtype\": {\n        \"values\": [\n            \"2\"\n        ]\n    },\n    \"shownInInteractiveExpose\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"automatedSendingInteractiveExpose\": {\n        \"values\": [\n            true\n        ]\n    }\n}"
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/entity-service/stable/schemas/{{schemaId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"entity-service",
+								"stable",
+								"schemas",
+								"{{schemaId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Contacts-API",
+			"item": [
+				{
+					"name": "Show a specific Contact",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"type": "text",
+								"value": "{{cognitoToken}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/contact-service/stable/contact?email={{email}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"contact-service",
+								"stable",
+								"contact"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "{{email}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Colin\",\n    \"lastName\": \"Groebel\",\n    \"salutationletter\": \"Sehr geehrter Herr Groebel,\",\n    \"salutation\": \"Herr\",\n    \"emails\": [\n        \"colin.groebel@flowfact.de\"\n    ],\n    \"tags\": [\n        \"employee\"\n    ],\n    \"status\": \"active\",\n    \"company\": \"Flowfact\",\n    \"note\": \"Nächste Woche in Urlaub\",\n    \"keywords\": [],\n    \"phones\": [\n        {\n            \"type\": \"office\",\n            \"number\": \"022199590149\",\n            \"note\": \"Nur Morgens erreichbar.\"\n        }\n    ],\n    \"addresses\": [\n        {\n            \"city\": \"Köln\",\n            \"street\": \"Holweiderstraße 2a\",\n            \"type\": \"office\",\n            \"country\": \"Deutschland\",\n            \"zipcode\": \"51065\",\n            \"internationalregion\": \"\"\n        }\n    ],\n    \"contacttypes_allowed\": [],\n    \"homepage\": [\n        \"https://www.flowfact.de\"\n    ],\n    \"latitude\": {\n        \"values\": [\n            50.96354235\n        ]\n    },\n    \"isBlocked\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"longitude\": {\n        \"values\": [\n            7.00825927918016\n        ]\n    },\n    \"profession\": {\n        \"values\": [\n            \"Produktmanager\"\n        ]\n    },\n    \"hatHaustiere\": {\n    \t\"values\": [\n    \t\ttrue\n    \t\t]\n    }\n}\n"
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/contact-service/stable/contact",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"contact-service",
+								"stable",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Search-API",
+			"item": [
+				{
+					"name": "Show all Entities of a Schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\": \"ENTITY\",\n\"distinct\":true\n}"
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/search-service/stable/schemas/{{schemaOrSchemaGroupName}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"search-service",
+								"stable",
+								"schemas",
+								"{{schemaOrSchemaGroupName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchQuery",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"target\": \"ENTITY\",\n  \"fetch\": [\"headline\", \"description\"],\n  \"conditions\": [\n        {\n            \"type\": \"HASFIELDWITHVALUE\",\n            \"field\": \"status\",\n            \"value\": \"active\"\n        },\n        {\n            \"type\": \"HASFIELDWITHVALUE\",\n            \"field\": \"purchaseprice\",\n            \"value\": 500000,\n            \"operator\": \"GREATER\"\n        }\n  ],\n  \"sorts\": [\n        {\n            \"field\": \"_metadata.timestamp\",\n            \"direction\": \"ASC\"\n        }\n   ]\n}"
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/search-service/stable/schemas/{{schemaOrSchemaGroupName}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"search-service",
+								"stable",
+								"schemas",
+								"{{schemaOrSchemaGroupName}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "IEX-API",
+			"item": [
+				{
+					"name": "Create an IEX Template",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "isPublic",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "templateName",
+									"value": "{{templateName}}",
+									"type": "text"
+								},
+								{
+									"key": "templateNiceName",
+									"value": "{{templateNiceName}}",
+									"type": "text"
+								},
+								{
+									"key": "templateFiles",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "templateFiles",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/interactive-expose-service/stable/interactiveExposes/templates/{{templateName}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"interactive-expose-service",
+								"stable",
+								"interactiveExposes",
+								"templates",
+								"{{templateName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an IEX Template",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/interactive-expose-service/stable/interactiveExposes/templates/{{templateName}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"interactive-expose-service",
+								"stable",
+								"interactiveExposes",
+								"templates",
+								"{{templateName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an IEX Template",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/interactive-expose-service/stable/interactiveExposes/templates/{{templateName}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"interactive-expose-service",
+								"stable",
+								"interactiveExposes",
+								"templates",
+								"{{templateName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign an IEX Template",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n\t\t\"companyId\":\"{{companyId}}\",\n\t\t\"isDefault\":\"false\",\n\t\t\"templateName\":\"{{templateName}}\"\n\t}\n]"
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/interactive-expose-service/stable/interactiveExposes/templates/assignments",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"interactive-expose-service",
+								"stable",
+								"interactiveExposes",
+								"templates",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Multimedia-API",
+			"item": [
+				{
+					"name": "Upload a Multimedia File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/multimedia-service/stable/items/schemas/{{schemaName}}/entities/{{entityId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"multimedia-service",
+								"stable",
+								"items",
+								"schemas",
+								"{{schemaName}}",
+								"entities",
+								"{{entityId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Multimedia File",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/multimedia-service/stable/items/{{itemId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"multimedia-service",
+								"stable",
+								"items",
+								"{{itemId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
