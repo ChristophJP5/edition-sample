@@ -1,9 +1,0 @@
-{
-  "selectableByCustomer": false,
-  "requires": [
-    {
-      "bundle": "CRM",
-      "scope": "FLOWFACT"
-    }
-  ]
-}
