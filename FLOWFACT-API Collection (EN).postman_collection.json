@@ -547,6 +547,65 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Delete an Entity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an Entity",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "cognitoToken",
+								"value": "{{cognitoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"let\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"rooms\": {\n        \"values\": [\n            2\n        ]\n    },\n    \"status\": {\n        \"values\": [\n            \"inactive\"\n        ]\n    },\n    \"street\": {\n        \"values\": [\n            \"Margaretenstraße 27\"\n        ]\n    },\n    \"contact\": {\n        \"values\": []\n    },\n    \"created\": {\n        \"values\": [\n            1535958256\n        ]\n    },\n    \"elevator\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"headline\": {\n        \"values\": [\n            \"Musterdaten - Etagenwohung direkt im Herzen von Lichtenberg\"\n        ]\n    },\n    \"landlord\": {\n        \"values\": [\n            \"5a6eb8f1-850d-41b3-b306-96d2b937c90d\"\n        ]\n    },\n    \"latitude\": {\n        \"values\": [\n            52.5079643\n        ]\n    },\n    \"modified\": {\n        \"values\": [\n            1535958770\n        ]\n    },\n    \"priority\": {\n        \"values\": [\n            0\n        ]\n    },\n    \"shutters\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"addresses\": {\n        \"values\": [\n            {\n                \"city\": \"Berlin\",\n                \"type\": \"private\",\n                \"state\": null,\n                \"street\": \"Margaretenstraße 27\",\n                \"country\": \"Deutschland\",\n                \"zipcode\": \"10317\",\n                \"district\": null\n            }\n        ]\n    },\n    \"condition\": {\n        \"values\": [\n            \"01\"\n        ]\n    },\n    \"documents\": {\n        \"values\": []\n    },\n    \"longImage\": {\n        \"values\": [\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/3b/fda50215-6cb1-40d9-a7f5-29f55bf29e3b.jpg\",\n                \"size\": 46667,\n                \"headline\": \"asdf\",\n                \"position\": 0,\n                \"description\": \"asdf\"\n            },\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/6f97f7e5-dd52-4b51-b989-96e5598d2966.jpg\",\n                \"online\": true,\n                \"headline\": \"\",\n                \"position\": 1,\n                \"description\": \"\"\n            },\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/984ae908-1d70-4ad5-9d64-0cfad5b6e002.jpg\",\n                \"online\": true,\n                \"headline\": \"\",\n                \"position\": 2,\n                \"description\": \"\"\n            },\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/7322fad6-f61e-4773-9ca5-375e474521d8.jpg\",\n                \"online\": true,\n                \"headline\": \"\",\n                \"position\": 3,\n                \"description\": \"\"\n            }\n        ]\n    },\n    \"longitude\": {\n        \"values\": [\n            13.4974211\n        ]\n    },\n    \"mainImage\": {\n        \"values\": [\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/6c488d00-b42a-484e-b38e-b98e1a4b5ae2.jpg\",\n                \"online\": true,\n                \"headline\": \"\",\n                \"position\": 0,\n                \"description\": \"\"\n            }\n        ]\n    },\n    \"tradeType\": {\n        \"values\": [\n            \"0\"\n        ]\n    },\n    \"cellararea\": {\n        \"values\": [\n            32\n        ]\n    },\n    \"department\": {\n        \"values\": [\n            \"0\"\n        ]\n    },\n    \"estatetype\": {\n        \"values\": [\n            \"01\"\n        ]\n    },\n    \"identifier\": {\n        \"values\": [\n            \"5029\"\n        ]\n    },\n    \"livingarea\": {\n        \"values\": [\n            165\n        ]\n    },\n    \"numgarages\": {\n        \"values\": [\n            1\n        ]\n    },\n    \"shortImage\": {\n        \"values\": []\n    },\n    \"textEstate\": {\n        \"values\": [\n            \"Wohnen am Ostbahnhof. Leben Sie im Herzen von Berlin. In 10 Minuten mit der S-Bahn erreichen Sie sowohl den Alexanderplatz wie auch das Szeneviertel an der Warschauer Straße. Alle Apartments wurde im Jahr 2018 fertiggestellt und verfügen serienmäßig über eine Hochwertige Einbauküche.\"\n        ]\n    },\n    \"barrierfree\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"internImage\": {\n        \"values\": []\n    },\n    \"onlineImage\": {\n        \"values\": []\n    },\n    \"no_of_floors\": {\n        \"values\": [\n            2\n        ]\n    },\n    \"ceilingheight\": {\n        \"values\": [\n            3\n        ]\n    },\n    \"purchaseprice\": {\n        \"values\": [\n            171000\n        ]\n    },\n    \"typeofheating\": {\n        \"values\": [\n            \"FER\"\n        ]\n    },\n    \"completiondate\": {\n        \"values\": [\n            \"Sofort\"\n        ]\n    },\n    \"numberbedrooms\": {\n        \"values\": [\n            2\n        ]\n    },\n    \"sendToLandlord\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"builtin_kitchen\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"fuelenergy_type\": {\n        \"values\": [\n            \"FER\"\n        ]\n    },\n    \"groundplotImage\": {\n        \"values\": [\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/7381d82a-e3eb-4a70-8ce5-c561c5084d65.jpg\",\n                \"online\": true,\n                \"headline\": \"6\",\n                \"position\": 0,\n                \"description\": \"\"\n            },\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/82d534d4-6796-42b0-84ce-fea344fba5b8.jpg\",\n                \"online\": false,\n                \"headline\": \"\",\n                \"position\": 1,\n                \"description\": \"\"\n            },\n            {\n                \"uri\": \"https://s3.eu-central-1.amazonaws.com/cloudios.production.image/08/797f0dba-987b-4541-b79f-85c979820a08/a7/005c4eff-316a-4a91-8048-4a38485b84a7/pg/f58b8e56-35f6-4f54-9624-f99dbe8573cf.jpg\",\n                \"online\": false,\n                \"headline\": \"\",\n                \"position\": 2,\n                \"description\": \"\"\n            }\n        ]\n    },\n    \"pass_valid_till\": {\n        \"values\": [\n            1846015200\n        ]\n    },\n    \"showAsReference\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"textEnvironment\": {\n        \"values\": [\n            \"Hier befindet sich ein Windfang, ein großer Küchen- und Essbereich mit Kaminzimmer. Das große Wohnzimmer mit angrenzender überdachter Sonnenterrasse bildet den Mittelpunkt des Hauses. Die Küche ist mit einer hochwertigen, noch sehr neuen Einbauküche inkl. hochwertigen Einbaugeräten der Marke Miele ausgestattet. Ebenfalls befindet sich im unteren Bereich das Ankleidezimmer mit angrenzendem Schlafzimmer, ein Wannen- und Duschbad sowie ein separates Gäste-WC. \\n\\nDas Dachgeschoss hat eine Nutzfläche von ca. 100 m². Vier weitere Zimmer wurde in Wohnraumqualität ausgebaut und haben, auf Grund der Dachschrägen, einen besonderen Wohlfühlcharme. Ein weiteres Duschbad ist ebenfalls vorhanden.\"\n        ]\n    },\n    \"country_zip_city\": {\n        \"values\": [\n            \"10317 Berlin\"\n        ]\n    },\n    \"elevator_general\": {\n        \"values\": [\n            \"1\"\n        ]\n    },\n    \"energyusagevalue\": {\n        \"values\": [\n            35\n        ]\n    },\n    \"kitchen_existing\": {\n        \"values\": [\n            false\n        ]\n    },\n    \"wheelchairaccess\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"commissionCompany\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"commissionPartner\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"commissioninclvat\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"numlivingbedrooms\": {\n        \"values\": [\n            1\n        ]\n    },\n    \"commissionLandlord\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"commissionProspect\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"commissionTipGiver\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"yearofconstruction\": {\n        \"values\": [\n            2018\n        ]\n    },\n    \"commissionColleague\": {\n        \"values\": [\n            \"\"\n        ]\n    },\n    \"energywithwarmwater\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"internaldescription\": {\n        \"values\": [\n            \"Musterdaten - ETW Margaretenstraße 27\"\n        ]\n    },\n    \"energyefficienceclass\": {\n        \"values\": [\n            \"02\"\n        ]\n    },\n    \"energidentificationdate\": {\n        \"values\": [\n            1530396000\n        ]\n    },\n    \"energyidentificationtype\": {\n        \"values\": [\n            \"2\"\n        ]\n    },\n    \"shownInInteractiveExpose\": {\n        \"values\": [\n            true\n        ]\n    },\n    \"automatedSendingInteractiveExpose\": {\n        \"values\": [\n            true\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.production.cloudios.flowfact-prod.cloud/entity-service/stable/schemas/{{SchemaId}}/entities/{{entityId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"production",
+								"cloudios",
+								"flowfact-prod",
+								"cloud"
+							],
+							"path": [
+								"entity-service",
+								"stable",
+								"schemas",
+								"{{SchemaId}}",
+								"entities",
+								"{{entityId}}"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
